@@ -9,7 +9,7 @@ function Header({ language, copy, onLanguageChange }) {
   return (
     <header className="site-header">
       <a className="brand" href="#home" aria-label="Matheus Leão, home">
-        <span className="brand-mark" aria-hidden="true"><img src="/images/profile-photo.jpg" alt="" /></span>
+        <span className="brand-mark" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}images/profile-photo.jpg`} alt="" /></span>
         <span className="brand-name">MATHEUS LEÃO</span>
       </a>
 
@@ -307,7 +307,7 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <div className="section-shell footer-inner">
-          <a className="brand footer-brand" href="#home"><span className="brand-mark" aria-hidden="true"><img src="/images/profile-photo.jpg" alt="" /></span><span className="brand-name">MATHEUS LEÃO</span></a>
+          <a className="brand footer-brand" href="#home"><span className="brand-mark" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}images/profile-photo.jpg`} alt="" /></span><span className="brand-name">MATHEUS LEÃO</span></a>
           <p>{copy.footerLine}</p>
           <a className="back-to-top" href="#home"><span>{copy.backToTop}</span> <span aria-hidden="true">↑</span></a>
         </div>
