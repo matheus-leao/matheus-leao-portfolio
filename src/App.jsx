@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { COPY } from "./copy.js";
 import { PORTFOLIO_CONTENT } from "./content.js";
+import { openEmailDraft } from "./emailDraft.js";
 
 const EMAIL = "matsouzaleao@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/matheus-leao-br/";
@@ -246,7 +247,7 @@ function Contact({ copy, language }) {
     const subject = language === "pt" ? "Contato pelo portfólio" : "Portfolio inquiry";
     const nameLabel = language === "pt" ? "Nome" : "Name";
     const body = `${nameLabel}: ${data.get("name")}\nEmail: ${data.get("email")}\n\n${data.get("message")}`;
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    openEmailDraft(`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
     setStatus(copy.formStatus);
   }
 
