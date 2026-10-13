@@ -74,6 +74,7 @@ describe("portfolio navigation", () => {
       expect(link).toHaveAttribute("href", "https://www.linkedin.com/in/matheus-leao-br/");
       expect(link).toHaveAttribute("target", "_blank");
     });
+    expect(screen.getByRole("link", { name: "GitHub" })).toHaveAttribute("href", "https://github.com/matheus-leao");
   });
 });
 

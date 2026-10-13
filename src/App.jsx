@@ -5,6 +5,7 @@ import { openEmailDraft } from "./emailDraft.js";
 
 const EMAIL = "matsouzaleao@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/matheus-leao-br/";
+const GITHUB = "https://github.com/matheus-leao";
 
 function Header({ language, copy, onLanguageChange }) {
   return (
@@ -178,7 +179,12 @@ function Resume({ copy, content }) {
           </div>
           <div className="aside-note">
             <span className="aside-note-icon" aria-hidden="true">↗</span>
-            <p>{copy.linkedinPrompt}<br /><a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></p>
+            <p>
+              {copy.linkedinPrompt}<br />
+              <a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+              <span aria-hidden="true"> · </span>
+              <a href={GITHUB} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </p>
           </div>
         </aside>
       </div>
